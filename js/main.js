@@ -1,5 +1,5 @@
 var taskData = {
-  newTasks: [],
+  todoTasks: [],
   doneTasks: []
 };
 
@@ -8,7 +8,7 @@ document.getElementById('add').addEventListener('click', function(){
   var value = document.getElementById('item').value;
 
   if(value) {
-    taskData.newTasks.push(value);
+    //taskData.newTasks.push(value);
     addTaskTodo(value);
     document.getElementById('item').value = '';
   }
@@ -65,7 +65,7 @@ function addTaskTodo(text) {
   done.classList.add('complete');
   done.innerText = 'Done';
 
-  //add click-event for completing task
+  //add click-event for completing task & moving it to doneTasks lists
   done.addEventListener('click', doneTask);
 
   buttons.appendChild(del);
